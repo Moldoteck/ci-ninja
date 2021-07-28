@@ -1,0 +1,14 @@
+{
+  "name": "ci-ninja",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "body-parser": "^1.6.3",
+    "express": "4.17.1",
+    "netmask": "2.0.1",
+    "underscore": ""
+  }
+}
