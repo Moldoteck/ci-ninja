@@ -19,6 +19,10 @@ TODO: repo and container names should be in an JSON file
 TODO: explain easiest way to create service for debian/ubuntu
 TODO: explain how to deal with IP in google cloud
 
+Docker & docker-compose:
+https://docs.docker.com/engine/install/ubuntu/
+https://docs.docker.com/compose/install/
+
 Aaaaand you're done.
 
 # Samples
