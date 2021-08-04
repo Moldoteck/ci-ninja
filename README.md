@@ -23,6 +23,12 @@ Aaaaand you're done.
 
 # Samples
 ### `ci-ninja.service`
+Go to systemd:
+`cd /etc/systemd/system`
+and create file like this:
+`sudo nano ci-ninja.service`
+and past the following config. Don't forget to modify root-to-path part
+
 My sample systemd service for ubuntu to run ci-ninja
 ```
 [Unit]
@@ -30,12 +36,20 @@ Description=Service to start ci-ninja
 After=network.target
 
 [Service]
-WorkingDirectory=/home/ci-ninja
-ExecStart=/usr/bin/node /home/ci-ninja/index.js
+WorkingDirectory=/root-path-to-ninja/ci-ninja
+ExecStart=/usr/bin/node /root-path-to-ninja/ci-ninja/index.js
 
 [Install]
 WantedBy=multi-user.target
 ```
+Reload the service files to include the new service.
+`sudo systemctl daemon-reload`
+
+Start your service
+`sudo systemctl start ci-ninja.service`
+
+To enable your service on every reboot
+`sudo systemctl enable ci-ninja.service`
 
 # License
 MIT — use for any purpose. Would be great if you could leave a note about the original developers. Thanks!
